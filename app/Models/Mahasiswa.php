@@ -8,6 +8,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\Mahasiswa as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Models\mataKuliah;
+use App\Models\Mahasiswa_MataKuliah;
 
 class Mahasiswa extends Model //Definisi Model
 {
@@ -37,7 +38,7 @@ class Mahasiswa extends Model //Definisi Model
     }
 
     public function matakuliah(){
-        return $this->belongsToMany(mataKuliah::class, 'mahasiswa_matakuliah', 'mahasiswa_id', 'matakuliah_id')
+        return $this->belongsToMany(mataKuliah::class, 'mahasiswa_mk', 'mahasiswa_id', 'matakuliah_id')
             ->withPivot('nilai');
     }
     

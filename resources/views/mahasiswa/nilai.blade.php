@@ -16,7 +16,9 @@
             </div>
         </div>
     </div>
-
+    <div class="float-right my-2">
+        <a class="btn btn-success mt-3" href="{{ route('mahasiswa.cetak_khs',$nilai->nim) }}">Cetak PDF</a>
+    </div>
     <table class="table table-bordered mt-3">
         <tr>
             <th><strong>Mata Kuliah</strong></th>

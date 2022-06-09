@@ -30,6 +30,20 @@
                     <label for="Nama">Nama</label>
                     <input type="text" name="Nama" class="form-control" id="Nama" value="{{ $mahasiswa->nama }}" aria-describedby="Nama" >
                 </div>
+                <!-- <div class="form-group">
+                    <label for="foto">Foto</label>
+                    <br>
+                    <img width="50%"
+                        src="{{ $mahasiswa->foto ? asset('storage/' . $mahasiswa->foto) : asset('storage/images/default.png') }}"
+                        alt="{{ $mahasiswa->foto }}">
+                    <input type="file" name="foto" class="form-control mt-3">
+                </div> -->
+                <div class="form-group">
+                        <label for="foto">Foto</label>
+                        <input type="file" name="foto" class="form-control" id="foto" value="{{ $mahasiswa->foto }}" aria-describedby="foto" required="required">
+                        <img width="150px" src="{{ asset('storage/' . $mahasiswa->foto) }}">
+
+                </div>
                 <div class="form-group">
                         <label for="Kelas">Kelas</label>
                         <select class="form-control" name="Kelas" id="Kelas">

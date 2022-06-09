@@ -10,7 +10,7 @@ use App\Models\mataKuliah;
 class Mahasiswa_MataKuliah extends Model
 {
     use HasFactory;
-    protected $table = 'mahasiswa_matakuliah';
+    protected $table = 'mahasiswa_mk';
 
     protected $fillable = [
         'mahasiswa_id',
